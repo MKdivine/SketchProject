@@ -6,13 +6,13 @@
     margin: 0 auto; /* Container zentrieren */
     width: 800px; /* Container-Breite */
     height: 800px; /* Container-Höhe */
-    border: 2px solid black;
+   
 }
 
 .square {
     width: calc(100% / 16); /* 16 Quadrate pro Zeile */
     aspect-ratio: 1 / 1; /* Quadratische Felder */
     border: 1px solid black;
-    box-sizing: border-box;
+   display: flex;
     background-color: rgb(34, 169, 214); /* Zur Sichtbarkeit */
 }
