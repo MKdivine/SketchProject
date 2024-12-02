@@ -4,6 +4,9 @@ containerDiv.classList.add("container");
 document.body.appendChild(containerDiv);
 
 
+
+
+
 // random color
 function getRandomColor() {
     const r = Math.floor(Math.random() * 256); // Rot: 0-255
@@ -33,5 +36,9 @@ containerDiv.addEventListener("mouseover", function(event) {
 containerDiv.addEventListener("contextmenu", function(event) {
   if (event.target.classList.contains("square")) {
     event.target.style.backgroundColor = getRandomColor();
+    const h3 = document.createElement("h3");
+    h3.innerText = "Kathi";
+    h3.style.color = getRandomColor()
+    event.target.appendChild(h3);
   }
 })
