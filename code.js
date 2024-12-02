@@ -26,11 +26,11 @@ for (let i = 0; i < 256; i++) { // Es sollten genau 256 Quadrate sein
 // Event Listener für die Maus
 containerDiv.addEventListener("mouseover", function(event) {
   if (event.target.classList.contains("square")) {
-    event.target.style.backgroundColor = "white";
+    event.target.style.backgroundColor = "black";
   }
 })
 
-containerDiv.addEventListener("mouseout", function(event) {
+containerDiv.addEventListener("contextmenu", function(event) {
   if (event.target.classList.contains("square")) {
     event.target.style.backgroundColor = getRandomColor();
   }
