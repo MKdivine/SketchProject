@@ -1,3 +1,27 @@
+const button = document.createElement("button");
+document.body.appendChild(button);
+button.textContent = "Click me";
+button.style.backgroundColor = "light-green";
+
+button.addEventListener("click", function () {
+  alert("Button clicked!");
+  containerDiv.classList.add("container");
+  let userNum = prompt("Enter a number between 1 and 100");
+  let usernum1 = parseInt(userNum);
+
+  if (usernum1 >= 1 && usernum1 <= 100) {
+
+
+    for (let i = 0; i < usernum1; i++) {
+      // Sketchpad Usernum
+      const square = document.createElement("div");
+      square.classList.add("square");
+      containerDiv.appendChild(square); // ins Container-Div einfügen
+    }
+  }
+  
+});
+
 // Container erstellen
 const containerDiv = document.createElement("div");
 containerDiv.classList.add("container");
@@ -12,27 +36,15 @@ function getRandomColor() {
 }
 
 // Quadrate hinzufügen
-for (let i = 0; i < 256; i++) {
+for (let i = 0; i < 10000; i++) {
   // Es sollten genau 256 Quadrate sein
   const square = document.createElement("div");
   square.classList.add("square");
-  for (let i = 0; i < 256; i++) {}
   containerDiv.appendChild(square); // ins Container-Div einfügen
 }
 
-// Event Listener für die Maus
 containerDiv.addEventListener("mouseover", function (event) {
   if (event.target.classList.contains("square")) {
-    event.target.style.backgroundColor = "black";
-  }
-});
-
-containerDiv.addEventListener("contextmenu", function (event) {
-  if (event.target.classList.contains("square")) {
     event.target.style.backgroundColor = getRandomColor();
-    const h3 = document.createElement("h3");
-    h3.innerText = "Arier";
-    h3.style.color = getRandomColor();
-    event.target.appendChild(h3);
   }
 });

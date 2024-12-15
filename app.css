@@ -1,21 +1,16 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-betw;
     align-items: center;
     margin: 0 auto; /* Container zentrieren */
-    width: 800px; /* Container-Breite */
-    height: 800px; /* Container-Höhe */
    
 }
 
 .square {
-    width: calc(100% / 16); /* 16 Quadrate pro Zeile */
+    width: calc(100% /100); /* 16 Quadrate pro Zeile */
     aspect-ratio: 1 / 1; /* Quadratische Felder */
-    border: 1px solid black;
+    border: 0px solid black;
    display: flex;
-    
-
-.square:hover {
-    background-color: rgb(166, 27, 27); /* Bei Hover auf weiß ändern */
+   background-color: black;
 }
+    
