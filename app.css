@@ -13,4 +13,13 @@
    display: flex;
    background-color: black;
 }
+.user-square {
+    width: calc(100% /100); /* 16 Quadrate pro Zeile */
+    aspect-ratio: 1 / 1; /* Quadratische Felder */
+    border: 0px solid rgb(209, 151, 151);
+   display: flex;
+   background-color: rgb(90, 165, 37);
+}
+
+
     

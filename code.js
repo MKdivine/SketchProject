@@ -8,29 +8,26 @@ const containerDiv = document.createElement("div");
 containerDiv.classList.add("container");
 document.body.appendChild(containerDiv);
 
-
 button.addEventListener("click", function () {
   alert("Button clicked!");
 
-  containerDiv.classList.remove("container")
-
+  containerDiv.innerHTML = ""; // Container leeren
 
   let userNum = prompt("Enter a number between 1 and 100");
   let usernum1 = parseInt(userNum);
 
   if (usernum1 >= 1 && usernum1 <= 100) {
-
-
     for (let i = 0; i < usernum1; i++) {
       // Sketchpad Usernum
+      
+
       const square = document.createElement("div");
-      square.classList.add("square");
+      square.classList.add("user-square");
       containerDiv.appendChild(square); // ins Container-Div einfügen
+      
     }
   }
-  
 });
-
 
 // random color
 function getRandomColor() {
