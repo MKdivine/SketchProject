@@ -19,12 +19,10 @@ button.addEventListener("click", function () {
   if (usernum1 >= 1 && usernum1 <= 100) {
     for (let i = 0; i < usernum1; i++) {
       // Sketchpad Usernum
-      
 
       const square = document.createElement("div");
       square.classList.add("user-square");
       containerDiv.appendChild(square); // ins Container-Div einfügen
-      
     }
   }
 });
