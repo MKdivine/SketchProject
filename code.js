@@ -1,11 +1,20 @@
 const button = document.createElement("button");
 document.body.appendChild(button);
 button.textContent = "Click me";
-button.style.backgroundColor = "light-green";
+button.style.backgroundColor = "lightgreen";
+
+// Container erstellen
+const containerDiv = document.createElement("div");
+containerDiv.classList.add("container");
+document.body.appendChild(containerDiv);
+
 
 button.addEventListener("click", function () {
   alert("Button clicked!");
-  containerDiv.classList.add("container");
+
+  containerDiv.classList.remove("container")
+
+
   let userNum = prompt("Enter a number between 1 and 100");
   let usernum1 = parseInt(userNum);
 
@@ -22,10 +31,6 @@ button.addEventListener("click", function () {
   
 });
 
-// Container erstellen
-const containerDiv = document.createElement("div");
-containerDiv.classList.add("container");
-document.body.appendChild(containerDiv);
 
 // random color
 function getRandomColor() {
