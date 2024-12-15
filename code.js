@@ -1,7 +1,7 @@
 const button = document.createElement("button");
+button.classList.add("user-button");
+button.innerText = "Generate Grid";
 document.body.appendChild(button);
-button.textContent = "Click me";
-button.style.backgroundColor = "lightgreen";
 
 // Container erstellen
 const containerDiv = document.createElement("div");
