@@ -13,7 +13,7 @@ button.addEventListener("click", function () {
 
   containerDiv.innerHTML = ""; // Container leeren
 
-  let userNum = prompt("Enter a number between 1 and 100");
+  let userNum = prompt("Enter a number between 1 and 100 - or 64");
   let usernum1 = parseInt(userNum);
 
   if (usernum1 >= 1 && usernum1 <= 100) {
