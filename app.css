@@ -7,6 +7,18 @@ body {
     background-color: #f0f0f0;
 }
 
+.user-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user-button:hover {
+    background-color: rgb(193, 231, 196);
+}
 
 .container {
     display: flex;
@@ -43,18 +55,6 @@ body {
     /* Ensures borders don’t add to size */
     border: 0px solid rgb(209, 151, 151);
     display: flex;
-    background-color: rgb(90, 165, 37);
+    background-color: rgb(5, 11, 1);
 }
 
-.user-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.user-button:hover {
-    background-color: rgb(193, 231, 196);
-}
