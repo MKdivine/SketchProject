@@ -1,12 +1,16 @@
+// Button erstellen
+
 const button = document.createElement("button");
 button.classList.add("user-button");
-button.innerText = "Generate Grid";
+button.innerText = "Generate Custom Grid";
 document.body.appendChild(button);
 
 // Container erstellen
 const containerDiv = document.createElement("div");
 containerDiv.classList.add("container");
 document.body.appendChild(containerDiv);
+
+// Default Grid
 
 button.addEventListener("click", function () {
   alert("Button clicked!");
@@ -36,7 +40,7 @@ function getRandomColor() {
 }
 
 // Quadrate hinzufügen
-for (let i = 0; i < 10000; i++) {
+for (let i = 0; i < 256; i++) {
   // Es sollten genau 256 Quadrate sein
   const square = document.createElement("div");
   square.classList.add("square");
