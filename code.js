@@ -10,6 +10,15 @@ const containerDiv = document.createElement("div");
 containerDiv.classList.add("container");
 document.body.appendChild(containerDiv);
 
+// Quadrate hinzufügen
+for (let i = 0; i < 256; i++) {
+  // Es sollten genau 256 Quadrate sein
+  const square = document.createElement("div");
+  square.classList.add("square");
+  containerDiv.appendChild(square); // ins Container-Div einfügen
+}
+
+
 // Default Grid
 
 button.addEventListener("click", function () {
@@ -40,14 +49,6 @@ function getRandomColor() {
   const g = Math.floor(Math.random() * 256); // Grün: 0-255
   const b = Math.floor(Math.random() * 256); // Blau: 0-255
   return `rgb(${r}, ${g}, ${b})`;
-}
-
-// Quadrate hinzufügen
-for (let i = 0; i < 256; i++) {
-  // Es sollten genau 256 Quadrate sein
-  const square = document.createElement("div");
-  square.classList.add("square");
-  containerDiv.appendChild(square); // ins Container-Div einfügen
 }
 
 containerDiv.addEventListener("mouseover", function (event) {

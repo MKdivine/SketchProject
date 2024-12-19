@@ -40,12 +40,5 @@ body {
     border: 1px solid #ddd;
 }
 
-.user-square {
-   
-    /* Matches width for square shape */
-    box-sizing: border-box;
-    /* Ensures borders don’t add to size */
-    border: 0px solid rgb(209, 151, 151);
-    background-color: rgb(5, 11, 1);
-}
+
 
