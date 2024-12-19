@@ -25,7 +25,7 @@ button.addEventListener("click", function () {
          // Sketchpad Usernum
 
       const square = document.createElement("div");
-      square.classList.add("user-square");
+      square.classList.add("square");
       square.style.width = `${640 / usernum1}px`;
       square.style.height = `${640 / usernum1}px`;
       containerDiv.appendChild(square); // ins Container-Div einfügen
