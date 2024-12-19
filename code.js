@@ -13,8 +13,6 @@ document.body.appendChild(containerDiv);
 // Default Grid
 
 button.addEventListener("click", function () {
-  alert("Button clicked!");
-
   containerDiv.innerHTML = ""; // Container leeren
 
   let userNum = prompt("Enter a number between 1 and 100 - or 64");

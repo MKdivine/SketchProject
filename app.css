@@ -14,10 +14,12 @@ body {
     margin: auto;
     padding: 10px;
     border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #d4e6d5;
 }
 
 .user-button:hover {
-    background-color: rgb(193, 231, 196);
+    background-color: rgb(116, 228, 125);
 }
 
 .container {
