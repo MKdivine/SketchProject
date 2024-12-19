@@ -10,7 +10,7 @@ const containerDiv = document.createElement("div");
 containerDiv.classList.add("container");
 document.body.appendChild(containerDiv);
 
-// Quadrate hinzufügen
+// default grid
 for (let i = 0; i < 256; i++) {
   // Es sollten genau 256 Quadrate sein
   const square = document.createElement("div");
@@ -18,8 +18,7 @@ for (let i = 0; i < 256; i++) {
   containerDiv.appendChild(square); // ins Container-Div einfügen
 }
 
-
-// Default Grid
+// User Generated Grid
 
 button.addEventListener("click", function () {
   containerDiv.innerHTML = ""; // Container leeren
@@ -27,17 +26,16 @@ button.addEventListener("click", function () {
   let userNum = prompt("Enter a number between 1 and 100 - or 64");
   let usernum1 = parseInt(userNum);
 
-
   if (usernum1 >= 1 && usernum1 <= 100) {
     for (let reihe = 0; reihe < usernum1; reihe++) {
       for (let spalte = 0; spalte < usernum1; spalte++) {
-         // Sketchpad Usernum
+        // Sketchpad Usernum
 
-      const square = document.createElement("div");
-      square.classList.add("square");
-      square.style.width = `${640 / usernum1}px`;
-      square.style.height = `${640 / usernum1}px`;
-      containerDiv.appendChild(square); // ins Container-Div einfügen
+        const square = document.createElement("div");
+        square.classList.add("square");
+        square.style.width = `${640 / usernum1}px`;
+        square.style.height = `${640 / usernum1}px`;
+        containerDiv.appendChild(square); // ins Container-Div einfügen
       }
     }
   }
