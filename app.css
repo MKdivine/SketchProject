@@ -1,9 +1,5 @@
 body {
-  
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+
     background-color: #f0f0f0;
     margin-top: 40px;
 }
@@ -45,18 +41,14 @@ body {
     box-sizing: border-box;
     /* Ensures borders don’t add to size */
     border: 1px solid #ddd;
-    /* Optional: Thin border for visual clarity;
-
+}
 
 .user-square {
-    flex: 0 0 calc(100% / 16);
-    /* Each square takes up 1/16th of the row */
-    height: calc(100% / 16);
+   
     /* Matches width for square shape */
     box-sizing: border-box;
     /* Ensures borders don’t add to size */
     border: 0px solid rgb(209, 151, 151);
-    display: flex;
     background-color: rgb(5, 11, 1);
 }
 
