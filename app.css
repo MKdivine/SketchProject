@@ -27,9 +27,9 @@ body {
     flex-wrap: wrap;
     margin: auto;
     /* Allow flex items to wrap */
-    width: 80vmin;
+    width: 640px;
     /* Responsive size */
-    height: 80vmin;
+    height: 640px;
     /* Matches width for a square container */
     border: 2px solid #333;
     /* Optional border */
@@ -40,13 +40,12 @@ body {
     /* Each square takes up 1/16th of the row */
     height: calc(100% / 16);
     /* Matches width for square shape */
-    background-color: #4caf50;
+    background-color: #000601;
     /* Green background */
     box-sizing: border-box;
     /* Ensures borders don’t add to size */
     border: 1px solid #ddd;
-    /* Optional: Thin border for visual clarity */
-}
+    /* Optional: Thin border for visual clarity;
 
 
 .user-square {

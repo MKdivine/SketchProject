@@ -18,6 +18,7 @@ button.addEventListener("click", function () {
   let userNum = prompt("Enter a number between 1 and 100 - or 64");
   let usernum1 = parseInt(userNum);
 
+
   if (usernum1 >= 1 && usernum1 <= 100) {
     for (let i = 0; i < usernum1; i++) {
       // Sketchpad Usernum
