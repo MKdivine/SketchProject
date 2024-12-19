@@ -11,13 +11,17 @@ containerDiv.classList.add("container");
 document.body.appendChild(containerDiv);
 
 // default grid
-for (let i = 0; i < 256; i++) {
-  // Es sollten genau 256 Quadrate sein
-  const square = document.createElement("div");
-  square.classList.add("square");
-  containerDiv.appendChild(square); // ins Container-Div einfügen
+function defaultGrid() {
+  
+  for (let i = 0; i < 256; i++) {
+    // Es sollten genau 256 Quadrate sein
+    const square = document.createElement("div");
+    square.classList.add("square");
+    containerDiv.appendChild(square); // ins Container-Div einfügen
+  }
 }
 
+defaultGrid();
 // User Generated Grid
 
 button.addEventListener("click", function () {

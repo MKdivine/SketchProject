@@ -1,5 +1,5 @@
 body {
-    background-color: #f0f0f0;
+    background-color: #ab9eeb;
     margin-top: 40px;
 }
 
@@ -26,17 +26,18 @@ body {
     /* Responsive size */
     height: 640px;
     /* Matches width for a square container */
-    border: 2px solid #333;
+    border: 5px solid #160404;
     /* Optional border */
 }
 
 .square {
-   
+    width: 40px;
+    height: 40px;
     background-color: #000601;
     /* Green background */
     box-sizing: border-box;
     /* Ensures borders don’t add to size */
-    border: 1px solid #ddd;
+    border: 1px solid #510606;
 }
 
 
