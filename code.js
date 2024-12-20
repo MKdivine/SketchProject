@@ -53,22 +53,25 @@ function getRandomColor() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
-containerDiv.addEventListener("mouseover", function (event) {
+/* containerDiv.addEventListener("mouseover", function (event) {
   if (event.target.classList.contains("square")) {
     event.target.style.backgroundColor = getRandomColor();
   }
 });
-
+ */
 
 function getOpacity() {
-  for (let i = 1; i >= 0.1; i -= 0.1) {
-    return i; // opacity
+  let num = 1
+  while (num > 0) {
+    num = num - 0.1;
+    return num;
   }
 }
 
 
-containerDiv.addEventListener("mouseout", function (event) {
+containerDiv.addEventListener("mouseover", function (event) {
   if (event.target.classList.contains("square")) {
+    event.target.style.color = "white";
     event.target.style.opacity = getOpacity();
   }
 })
