@@ -53,25 +53,26 @@ function getRandomColor() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
-/* containerDiv.addEventListener("mouseover", function (event) {
+containerDiv.addEventListener("mouseover", function (event) {
   if (event.target.classList.contains("square")) {
     event.target.style.backgroundColor = getRandomColor();
   }
 });
- */
 
-function getOpacity() {
-  let num = 1
-  while (num > 0) {
-    num = num - 0.1;
-    return num;
-  }
+
+function getOpacity(opa) {
+  let num = parseFloat(opa); // Umwandeln in eine Zahl
+  return Math.max(num - 0.1, 0); // Reduzieren und sicherstellen, dass es nicht unter 0 geht
 }
 
 
-containerDiv.addEventListener("mouseover", function (event) {
+
+containerDiv.addEventListener("mousedown", function (event) {
   if (event.target.classList.contains("square")) {
-    event.target.style.color = "white";
-    event.target.style.opacity = getOpacity();
+    event.target.style.backgroundColor = getRandomColor();
+
+    let opa = getComputedStyle(event.target).opacity; // Aktuellen Wert holen
+    event.target.style.opacity = getOpacity(opa); // Neuen Wert berechnen und setzen
   }
-})
+});
+
