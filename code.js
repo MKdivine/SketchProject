@@ -55,7 +55,7 @@ function getRandomColor() {
 
 containerDiv.addEventListener("mouseover", function (event) {
   if (event.target.classList.contains("square")) {
-    event.target.style.backgroundColor = getRandomColor();
+    event.target.style.backgroundColor = "black";
   }
 });
 
@@ -67,7 +67,7 @@ function getOpacity(opa) {
 
 
 
-containerDiv.addEventListener("mousedown", function (event) {
+containerDiv.addEventListener("mouseover", function (event) {
   if (event.target.classList.contains("square")) {
     event.target.style.backgroundColor = getRandomColor();
 

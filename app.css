@@ -26,18 +26,18 @@ body {
     /* Responsive size */
     height: 640px;
     /* Matches width for a square container */
-    border: 5px solid #160404;
+    border: 5px solid #7c0dd6;
     /* Optional border */
 }
 
 .square {
     width: 40px;
     height: 40px;
-    background-color: #000601;
+    background-color: #d6e6d9;
     /* Green background */
     box-sizing: border-box;
     /* Ensures borders don’t add to size */
-    border: 1px solid #510606;
+    border: 1px solid #3c088f;
 }
 
 
