@@ -4,24 +4,25 @@ body {
 }
 .booba {
     display: flex;
-    margin: auto;
+    margin: 0 auto;
     padding: 10px;
     border-radius: 5px;
-    margin-bottom: 10px;
     background-color: #a3185d;
-    width: 50%;
+    width: 30%;
 }
 
 .title {
     display: flex;
+    align-items: center;
+    margin: 0 auto;
     padding: 10px 10px;
     border-radius: 6px;
     margin-bottom: 10px;
     background-color: #f097c4;
     justify-content: center;
-    width: 50%;
-    height: 50%;
-    margin-left: 170px;
+    width: 30%;
+    height: 30%;
+
 }
 
 .booba:hover {
