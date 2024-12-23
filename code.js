@@ -34,6 +34,7 @@ containerDiv.classList.add("container");
 document.body.appendChild(containerDiv);
 
 
+
 // Funktion: Zufällige Farbe generieren
 function getRandomColor() {
   const r = Math.floor(Math.random() * 256); // Rot: 0-255
@@ -80,6 +81,8 @@ containerDiv.addEventListener("mouseover", function (event) {
     event.target.style.opacity = getOpacity(opa); // Neuen Wert berechnen und setzen
   }
 });
+
+
 
 
 // Button-Click: User-Grid erstellen
