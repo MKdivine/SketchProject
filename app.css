@@ -5,6 +5,7 @@ body {
 .booba {
     display: flex;
     margin: 0 auto;
+    margin-bottom: 20px;
     padding: 10px;
     border-radius: 5px;
     background-color: #a3185d;
@@ -15,9 +16,8 @@ body {
     display: flex;
     align-items: center;
     margin: 0 auto;
-    padding: 10px 10px;
-    border-radius: 6px;
-    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-bottom: 3px;
     background-color: #f097c4;
     justify-content: center;
     width: 30%;
@@ -29,9 +29,10 @@ body {
     background-color: rgb(27, 182, 40);
 }
 .user-button {
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    margin: auto;
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 10px;
