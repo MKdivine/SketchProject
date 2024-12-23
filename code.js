@@ -6,7 +6,8 @@ const buttondiv = document.createElement("div");
 buttondiv.classList.add("button-container");
 document.body.appendChild(buttondiv);
 
-// Button Loop
+
+// Button Loop 
 buttons.forEach(element => {   
   const button = document.createElement("button"); 
   button.innerText = element;
@@ -16,11 +17,11 @@ buttons.forEach(element => {
 });
 
 
-
 // Container erstellen
 const containerDiv = document.createElement("div");
 containerDiv.classList.add("container");
 document.body.appendChild(containerDiv);
+
 
 // Funktion: Zufällige Farbe generieren
 function getRandomColor() {
@@ -30,11 +31,13 @@ function getRandomColor() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
+
 // Funktion: Opacity berechnen
 function getOpacity(opa) {
   let num = parseFloat(opa); // Umwandeln in eine Zahl
   return Math.max(num - 0.1, 0); // Reduzieren und sicherstellen, dass es nicht unter 0 geht
 }
+
 
 // Funktion: Grid erstellen
 function createGrid(gridSize) {
@@ -50,8 +53,10 @@ function createGrid(gridSize) {
   }
 }
 
+
 // Default Grid
 createGrid(16); // 16x16 Standard-Grid
+
 
 // EventListener für Container (Delegation)
 containerDiv.addEventListener("mouseover", function (event) {
@@ -64,6 +69,7 @@ containerDiv.addEventListener("mouseover", function (event) {
     event.target.style.opacity = getOpacity(opa); // Neuen Wert berechnen und setzen
   }
 });
+
 
 // Button-Click: User-Grid erstellen
 button.addEventListener("click", function () {
