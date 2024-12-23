@@ -1,8 +1,16 @@
 // Button erstellen
+const buttons = ["Custom Grid", "Random Color", "Black&White"]
+
 const button = document.createElement("button");
-button.classList.add("user-button");
-button.innerText = "Generate Custom Grid";
-document.body.appendChild(button);
+
+buttons.forEach(element => {   
+  const button = document.createElement("button"); 
+  button.innerText = element;
+  document.body.appendChild(button);
+  button.classList.add("user-button");
+  
+});
+
 
 // Container erstellen
 const containerDiv = document.createElement("div");
