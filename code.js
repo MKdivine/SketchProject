@@ -13,6 +13,11 @@ buttons.forEach(element => {
 
 
 // Container erstellen
+const buttondiv = document.createElement("div");
+buttondiv.classList.add("button-container");
+document.body.appendChild(buttondiv);
+
+// Container erstellen
 const containerDiv = document.createElement("div");
 containerDiv.classList.add("container");
 document.body.appendChild(containerDiv);

@@ -28,11 +28,11 @@ body {
 .booba:hover {
     background-color: rgb(27, 182, 40);
 }
-.user-button {
+.button-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+}
+
+.user-button {
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 10px;
