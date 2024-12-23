@@ -6,7 +6,7 @@ const buttondiv = document.createElement("div");
 buttondiv.classList.add("button-container");
 document.body.appendChild(buttondiv);
 
-
+// Button Loop
 buttons.forEach(element => {   
   const button = document.createElement("button"); 
   button.innerText = element;
