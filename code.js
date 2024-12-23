@@ -16,6 +16,8 @@ buttons.forEach(element => {
   buttondiv.appendChild(button);
 });
 
+
+
 const clickButton = document.querySelector("button")
 clickButton.addEventListener("click", function (event) {
   if (event.target.classList.contains("square")) {
@@ -23,6 +25,7 @@ clickButton.addEventListener("click", function (event) {
     event.target.style.backgroundColor = getRandomColor();
   }
 })
+
 
 
 // Container erstellen
