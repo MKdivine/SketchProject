@@ -18,6 +18,18 @@ buttons.forEach((element) => {
   document.body.appendChild(button);
   button.classList.add("user-button");
   buttondiv.appendChild(button);
+
+  // Button Event Loop 
+
+  button.addEventListener("click", () => {
+    if (index === 0) {
+       createGrid()
+    } else if (index === 1) {
+      rgbAbuse()
+    } else if (index === 2) {
+      blackAndWhite()
+    }
+  })
 });
 
 const clickButton = document.querySelector("button");
@@ -77,7 +89,7 @@ function createGrid(gridSize) {
 // Default Grid
 createGrid(16); // 16x16 Standard-Grid
 
-// EventListener für Container (Delegation)
+// Default EventListener für Container (Delegation)
 containerDiv.addEventListener("mouseover", function (event) {
   if (event.target.classList.contains("square")) {
     // Zufällige Farbe setzen
@@ -87,7 +99,7 @@ containerDiv.addEventListener("mouseover", function (event) {
 });
 
 // Button-Click: User-Grid erstellen
-button.addEventListener("click", function () {
+function userGrid() {
   let userNum = prompt("Enter a number between 1 and 100:");
   let gridSize = parseInt(userNum);
 
@@ -96,4 +108,4 @@ button.addEventListener("click", function () {
   } else {
     alert("Please enter a valid number between 1 and 100.");
   }
-});
+}
