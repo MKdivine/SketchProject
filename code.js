@@ -36,8 +36,26 @@ function getRandomColor() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
+// Funktion: Black&White Modus aktivieren
+function blackAndWhite() {
+  containerDiv.addEventListener("mouseover", function (event) {
+    if (event.target.classList.contains("square")) {
+      event.target.style.backgroundColor = "black";
+    }
+  });
+}
+
+function rgbAbuse() {
+  containerDiv.addEventListener("mouseover", function (event) {
+    if (event.target.classList.contains("square")) {
+      event.target.style.backgroundColor = getRandomColor();
+    }
+  });
+}
+
 // Funktion: Opacity berechnen
 function getOpacity(opa) {
+
   let num = parseFloat(opa); // Umwandeln in eine Zahl
   return Math.max(num - 0.1, 0); // Reduzieren und sicherstellen, dass es nicht unter 0 geht
 }
@@ -63,11 +81,8 @@ createGrid(16); // 16x16 Standard-Grid
 containerDiv.addEventListener("mouseover", function (event) {
   if (event.target.classList.contains("square")) {
     // Zufällige Farbe setzen
-    event.target.style.backgroundColor = getRandomColor();
+    event.target.style.backgroundColor = "green";
 
-    // Opacity berechnen und setzen
-    let opa = getComputedStyle(event.target).opacity; // Aktuellen Wert holen
-    event.target.style.opacity = getOpacity(opa); // Neuen Wert berechnen und setzen
   }
 });
 
