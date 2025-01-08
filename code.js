@@ -63,7 +63,7 @@ function getOpacity(opa) {
 
 
 // Button Loop
-buttons.forEach((element) => {
+buttons.forEach((element, index) => {
   const button = document.createElement("button");
   button.innerText = element;
   document.body.appendChild(button);
@@ -74,7 +74,7 @@ buttons.forEach((element) => {
 
   button.addEventListener("click", () => {
     if (index === 0) {
-       createGrid()
+       userGrid()
     } else if (index === 1) {
       rgbAbuse()
     } else if (index === 2) {
