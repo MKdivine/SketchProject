@@ -3,7 +3,7 @@
 
 
 // Button erstellen
-const buttons = ["Custom Grid", "Random Color", "Black&White", "Opacity"];
+const buttons = ["Custom Grid", "Random Color", "Black&White", "Eraser"];
 
 
 // Button Container erstellen
@@ -88,18 +88,21 @@ function userGrid() {
 
 
 // Funktion: Opacity berechnen
-function getOpacity(opa) {
-  let num = parseFloat(opa); // Umwandeln in eine Zahl
-  return Math.max(num - 0.1, 0); // Reduzieren und sicherstellen, dass es nicht unter 0 geht
-}
+
 
 // EventListener für Opacity-Änderung
+function eraser() {
+  function getOpacity(opa) {
+    let num = parseFloat(opa); // Umwandeln in eine Zahl
+    return Math.max(num - 0.1, 0); // Reduzieren und sicherstellen, dass es nicht unter 0 geht
+  }
 containerDiv.addEventListener("mouseover", function (event) {
   if (event.target.classList.contains("square")) {
     let currentOpacity = getComputedStyle(event.target).opacity;
     event.target.style.opacity = getOpacity(currentOpacity);
   }
 });
+}
 
 
 
@@ -122,7 +125,7 @@ buttons.forEach((element, index) => {
     } else if (index === 2) {
       blackAndWhite()
     } else if (index === 3) {
-      getOpacity()
+      eraser()
     }
   })
 });
