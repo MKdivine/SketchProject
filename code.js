@@ -1,7 +1,9 @@
 // === BUTTONS UND CO ===
 
+
+
 // Button erstellen
-const buttons = ["Custom Grid", "Random Color", "Black&White"];
+const buttons = ["Custom Grid", "Random Color", "Black&White", "Opacity"];
 
 
 // Button Container erstellen
@@ -14,6 +16,38 @@ document.body.appendChild(buttondiv);
 const containerDiv = document.createElement("div");
 containerDiv.classList.add("container");
 document.body.appendChild(containerDiv);
+
+
+// === Default Grid
+
+// Funktion: default Grid erstellen
+function createGrid(gridSize) {
+  containerDiv.innerHTML = ""; // Container leeren
+
+  const squareSize = 640 / gridSize; // Größe der Quadrate berechnen
+  for (let i = 0; i < gridSize * gridSize; i++) {
+    const square = document.createElement("div");
+    square.classList.add("square");
+    square.style.width = `${squareSize}px`;
+    square.style.height = `${squareSize}px`;
+    containerDiv.appendChild(square);
+  }
+}
+
+// Default Grid
+createGrid(16); // 16x16 Standard-Grid
+
+
+// Default EventListener für Container (Delegation)
+containerDiv.addEventListener("mouseover", function (event) {
+  if (event.target.classList.contains("square")) {
+    // Zufällige Farbe setzen
+    event.target.style.backgroundColor = "pink";
+
+  }
+});
+
+
 
 // === VITAL FUNCTIONS FOR THE GRID ===
 
@@ -53,13 +87,21 @@ function userGrid() {
 }
 
 
-/* // Funktion: Opacity berechnen
+// Funktion: Opacity berechnen
 function getOpacity(opa) {
-
   let num = parseFloat(opa); // Umwandeln in eine Zahl
   return Math.max(num - 0.1, 0); // Reduzieren und sicherstellen, dass es nicht unter 0 geht
 }
- */
+
+// EventListener für Opacity-Änderung
+containerDiv.addEventListener("mouseover", function (event) {
+  if (event.target.classList.contains("square")) {
+    let currentOpacity = getComputedStyle(event.target).opacity;
+    event.target.style.opacity = getOpacity(currentOpacity);
+  }
+});
+
+
 
 
 // Button Loop
@@ -79,42 +121,11 @@ buttons.forEach((element, index) => {
       rgbAbuse()
     } else if (index === 2) {
       blackAndWhite()
+    } else if (index === 3) {
+      getOpacity()
     }
   })
 });
 
-/* const clickButton = document.querySelector("button");
-clickButton.addEventListener("click", function (event) {
-  if (event.target.classList.contains("square")) {
-    // Zufällige Farbe setzen
-    event.target.style.backgroundColor = getRandomColor();
-  }
-});
- */
 
-// Funktion: Grid erstellen
-function createGrid(gridSize) {
-  containerDiv.innerHTML = ""; // Container leeren
-
-  const squareSize = 640 / gridSize; // Größe der Quadrate berechnen
-  for (let i = 0; i < gridSize * gridSize; i++) {
-    const square = document.createElement("div");
-    square.classList.add("square");
-    square.style.width = `${squareSize}px`;
-    square.style.height = `${squareSize}px`;
-    containerDiv.appendChild(square);
-  }
-}
-
-// Default Grid
-createGrid(16); // 16x16 Standard-Grid
-
-// Default EventListener für Container (Delegation)
-containerDiv.addEventListener("mouseover", function (event) {
-  if (event.target.classList.contains("square")) {
-    // Zufällige Farbe setzen
-    event.target.style.backgroundColor = "green";
-
-  }
-});
 
